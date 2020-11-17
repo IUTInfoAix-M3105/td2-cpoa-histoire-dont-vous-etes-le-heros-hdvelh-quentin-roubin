@@ -3,7 +3,7 @@
  * Creation: 7 nov. 2020, Jean-Philippe.Prost@univ-amu.fr
  * Template étudiants
  */
-package pracHDVELH;w
+package pracHDVELH;
 
 import myUtils.ErrorNaiveHandler;
 
