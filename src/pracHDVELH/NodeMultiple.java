@@ -36,6 +36,7 @@ public class NodeMultiple {
 	 */
 	public NodeMultiple getDaughter(int i) {
 		/* TO BE COMPLETED */
+		return daughters[i];
 	}
 
 	/**

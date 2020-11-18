@@ -17,12 +17,18 @@ public class Event extends NodeMultiple {
 	public static final String ERROR_MSG_UNEXPECTED_END = "Sorry, for some unexpected reason the story ends here...";
 	public static final String PROMPT_ANSWER = "Answer: ";
 	public static final String WARNING_MSG_INTEGER_EXPECTED = "Please input a integer within range!";
+	private String playerAnswer;
+	private Scanner reader;
+	private int chosenPath;
+	private GUIManager gui;
+	private int id;
 
 	/**
 	 * @return the playerAnswer
 	 */
 	public String getPlayerAnswer() {
 		/* TO BE COMPLETED */
+		return playerAnswer;
 	}
 
 	/**
@@ -30,6 +36,7 @@ public class Event extends NodeMultiple {
 	 */
 	public void setPlayerAnswer(String playerAnswer) {
 		/* TO BE COMPLETED */
+		this.playerAnswer=playerAnswer;
 	}
 
 	/**
@@ -37,6 +44,7 @@ public class Event extends NodeMultiple {
 	 */
 	public Scanner getReader() {
 		/* TO BE COMPLETED */
+		return reader;
 	}
 
 	/**
@@ -44,6 +52,7 @@ public class Event extends NodeMultiple {
 	 */
 	public void setReader(Scanner reader) {
 		/* TO BE COMPLETED */
+		this.reader=reader;
 	}
 
 	/**
@@ -51,6 +60,7 @@ public class Event extends NodeMultiple {
 	 */
 	public int getChosenPath() {
 		/* TO BE COMPLETED */
+		return chosenPath;
 	}
 
 	/**
@@ -58,6 +68,7 @@ public class Event extends NodeMultiple {
 	 */
 	public void setChosenPath(int chosenPath) {
 		/* TO BE COMPLETED */
+		this.chosenPath=chosenPath;
 	}
 
 	/* Methods */
@@ -66,6 +77,8 @@ public class Event extends NodeMultiple {
 	 */
 	public String getData() {
 		/* TO BE COMPLETED */
+		//il faudrait passer la méthode en static?
+		//return pracHDVELH.NodeMultiple.getData();
 	}
 
 	/**
@@ -74,6 +87,8 @@ public class Event extends NodeMultiple {
 	 */
 	public void setData(String data) {
 		/* TO BE COMPLETED */
+		//il faudrait passer la méthode en static?
+		//pracHDVELH.NodeMultiple.setData(data);
 	}
 
 	/**
@@ -82,6 +97,8 @@ public class Event extends NodeMultiple {
 	@Override
 	public Event getDaughter(int i) {
 		/* TO BE COMPLETED */
+		//il faudrait passer la méthode en static?
+		//return pracHDVELH.NodeMultiple.getDaughter(i);
 	}
 
 	/**
@@ -91,6 +108,8 @@ public class Event extends NodeMultiple {
 	 */
 	public void setDaughter(Event daughter, int i) {
 		/* TO BE COMPLETED */
+		//il faudrait passer la méthode en static?
+		//pracHDVELH.NodeMultiple.setDaughter(daughter, i);
 	}
 
 	/**
@@ -98,6 +117,7 @@ public class Event extends NodeMultiple {
 	 */
 	public GUIManager getGui() {
 		/* TO BE COMPLETED */
+		return gui;
 	}
 
 	/**
@@ -105,6 +125,7 @@ public class Event extends NodeMultiple {
 	 */
 	public void setGui(GUIManager gui) {
 		/* TO BE COMPLETED */
+		this.gui=gui;
 	}
 
 	/**
@@ -112,11 +133,21 @@ public class Event extends NodeMultiple {
 	 */
 	public int getId() {
 		/* TO BE COMPLETED */
+		return id;
 	}
 
 	/* Methods */
 	/* TO BE COMPLETED */
+	public Event(){
+		playerAnswer=new String();
+		//reader=new Scanner();
+	}
+
+
+	public void run(){
+		//à faire
 	}
 }
+
 
 // eof
