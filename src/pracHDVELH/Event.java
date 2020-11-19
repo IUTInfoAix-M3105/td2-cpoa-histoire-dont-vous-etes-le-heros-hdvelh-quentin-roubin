@@ -17,6 +17,7 @@ public class Event extends NodeMultiple {
 	public static final String ERROR_MSG_UNEXPECTED_END = "Sorry, for some unexpected reason the story ends here...";
 	public static final String PROMPT_ANSWER = "Answer: ";
 	public static final String WARNING_MSG_INTEGER_EXPECTED = "Please input a integer within range!";
+	static private int lastId=-1;
 	private String playerAnswer;
 	private Scanner reader;
 	private int chosenPath;
@@ -138,14 +139,25 @@ public class Event extends NodeMultiple {
 
 	/* Methods */
 	/* TO BE COMPLETED */
+	/* Constructeurs */
 	public Event(){
-		playerAnswer=new String();
-		//reader=new Scanner();
+
+	}
+	public Event(GUIManager gui, String data){
+		super(data);
+		this.gui=gui;
+		reader=gui.getInputReader();
+		id=++lastId;
+		chosenPath=-1;
 	}
 
 
-	public void run(){
-		//à faire
+	public Event run(){
+		gui.outputln(this.toString());
+		gui.output(PROMPT_ANSWER);
+		playerAnswer=reader.next();
+		chosenPath=interpretAnswer();  //ajouter interpretAnswer
+		return getDaughter(chosenPath);
 	}
 }
 
